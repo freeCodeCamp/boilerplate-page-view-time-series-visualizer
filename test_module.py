@@ -26,7 +26,7 @@ class LinePlotTestCase(unittest.TestCase):
         expected = "Page Views"
         self.assertEqual(actual, expected, "Expected line plot ylabel to be 'Page Views'")
 
-    def test_line_plot_data_quatity(self):
+    def test_line_plot_data_quantity(self):
         actual = len(self.ax.lines[0].get_ydata())
         expected = 1238
         self.assertEqual(actual, expected, "Expected number of data points in line plot to be 1238.")
@@ -111,7 +111,7 @@ class BoxPlotTestCase(unittest.TestCase):
         expected = "Month-wise Box Plot (Seasonality)"
         self.assertEqual(actual, expected, "Expected box plot 1 title to be 'Month-wise Box Plot (Seasonality)'")
 
-    def test_box_plot_number_of_boxs(self):
+    def test_box_plot_number_of_boxes(self):
         actual = len(self.ax1.lines) / 6 # Every box has 6 lines
         expected = 4
         self.assertEqual(actual, expected, "Expected four boxes in box plot 1")
