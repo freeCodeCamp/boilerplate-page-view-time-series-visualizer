@@ -83,10 +83,10 @@ class BoxPlotTestCase(unittest.TestCase):
         self.assertEqual(actual, expected, "Expected box plot 1 ylabel to be 'Page Views'")
         actual = self.ax2.get_xlabel()
         expected = "Month"
-        self.assertEqual(actual, expected, "Expected box plot 1 xlabel to be 'Month'")
+        self.assertEqual(actual, expected, "Expected box plot 2 xlabel to be 'Month'")
         actual = self.ax2.get_ylabel()
         expected = "Page Views"
-        self.assertEqual(actual, expected, "Expected box plot 1 ylabel to be 'Page Views'")
+        self.assertEqual(actual, expected, "Expected box plot 2 ylabel to be 'Page Views'")
         actual = []
         for label in self.ax1.get_xaxis().get_majorticklabels():
             actual.append(label.get_text())
@@ -109,7 +109,7 @@ class BoxPlotTestCase(unittest.TestCase):
         self.assertEqual(actual, expected, "Expected box plot 1 title to be 'Year-wise Box Plot (Trend)'")
         actual = self.ax2.get_title()
         expected = "Month-wise Box Plot (Seasonality)"
-        self.assertEqual(actual, expected, "Expected box plot 1 title to be 'Month-wise Box Plot (Seasonality)'")
+        self.assertEqual(actual, expected, "Expected box plot 2 title to be 'Month-wise Box Plot (Seasonality)'")
 
     def test_box_plot_number_of_boxes(self):
         actual = len(self.ax1.lines) / 6 # Every box has 6 lines
